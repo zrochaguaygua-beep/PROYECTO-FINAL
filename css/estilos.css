@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    background: #e0f7fa;
+    padding: 20px;
+}
+
+.module {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    display: block;
+    width: 90%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    background: #00796b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}.module h2 img, 
+.module h3 img {
+    
+    vertical-align: middle; 
+    width: 40px;
+    height: 40px;
+
+button:hover {
+    background: #004d40;
+}
+
+#navbar {
+    background: #004d40;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#navbar button {
+    width: auto;
+    background: transparent;
+}
+
+.message {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.logout-btn {
+    background: #c62828 !important;
+}

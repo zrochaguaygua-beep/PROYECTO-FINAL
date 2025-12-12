@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spa de Mascotas - Sistema</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="registro-usuario" class="module">
+        <h2> <img src="img/spa.png" alt="spa"> <br>
+            📝 Crear Cuenta de Administrador</h2>
+        <label>Correo / Usuario:</label>
+        <input type="text" id="nuevo-usuario" placeholder="ejemplo@correo.com">
+        <label>Contraseña:</label>
+        <input type="password" id="nueva-pass">
+        <button onclick="guardarUsuario()">Crear Cuenta</button>
+        <p id="msg-registro" class="message"></p>
+    </div>
+
+    <div id="login-module" class="module" style="display:none;">
+        <h2><img src="img/icon.png" alt="icon"> <br>
+            🔐 Iniciar Sesión</h2>
+        <label>Usuario:</label>
+        <input type="text" id="user-login">
+        <label>Contraseña:</label>
+        <input type="password" id="pass-login">
+        <button onclick="validarLogin()">Ingresar</button>
+        <p id="msg-login" class="message"></p>
+    </div>
+
+    <div id="sistema-spa" style="display:none;">
+        <nav id="navbar">
+            <span class="logo">🐾 PetSpa</span>
+            <button onclick="cambiarVista('seccion-mascotas')">Mascotas</button>
+            <button onclick="cambiarVista('seccion-agenda')">Agenda</button>
+            <button onclick="cambiarVista('seccion-carrito')">Carrito</button>
+            <button onclick="cerrarSesion()" class="logout-btn">Salir</button>
+        </nav>
+        
+        <section id="seccion-mascotas" class="module">
+            <h3> <img src="img/huella.png" alt="huella"> <br>
+                Registro de Mascotas</h3>
+            <input type="text" id="nom-mascota" placeholder="Nombre Mascota">
+            <input type="text" id="raza-mascota" placeholder="Raza">
+            <button onclick="registrarMascota()">Guardar Mascota</button>
+            <p id="msg-mascota" class="message"></p>
+        </section>
+
+        <section id="seccion-agenda" class="module" style="display:none;">
+            <h3><img src="img/calendario.png" alt="calendario"> <br>
+                Agendar Cita</h3>
+            <input type="date" id="fecha-cita">
+            <input type="text" id="mascota-cita" placeholder="Nombre de la mascota">
+            <button onclick="agendar()">Agendar</button>
+            <p id="msg-agenda" class="message"></p>
+        </section>
+
+        <section id="seccion-carrito" class="module" style="display:none;">
+            <h3><img src="img/carro.png" alt="carro"> <br>
+                Carrito de Compras</h3>
+            <div id="productos">
+                <p>Jabón Antipulgas - $10 <button onclick="agregar(10)">Comprar</button></p>
+                <p>Juguete Hueso - $5 <button onclick="agregar(5)">Comprar</button></p>
+            </div>
+            <h4>Total: $<span id="total-precio">0</span></h4>
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
